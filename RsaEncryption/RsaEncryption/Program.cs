@@ -11,10 +11,13 @@ namespace RsaEncryption
         {
             var primeGen = new Primes();
             var key = primeGen.GetKey();
-            const string message = "Hello World!";
-            Console.WriteLine("Original Text: \"" + message + "\"");
+
+            const string message = "Foo bar";
+            Console.WriteLine("\nOriginal Text: \"" + message + "\"");
+
             var cypherText = key.Encrypt(message);
             Console.Write("Cypher Text: ");
+
             var isFirstLetter = true;
             foreach (var place in cypherText)
             {
@@ -27,6 +30,7 @@ namespace RsaEncryption
                 Console.Write(", " + place);
             }
             Console.WriteLine();
+
             var decryptedText = key.Decrypt(cypherText);
             Console.WriteLine("Decrypted Text: \"" + decryptedText + "\"");
         }

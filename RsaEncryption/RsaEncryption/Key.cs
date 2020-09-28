@@ -17,6 +17,7 @@ namespace RsaEncryption
 
         internal Key(int primeOne, int primeTwo, List<int> primes)
         {
+            Console.WriteLine($"Initial variables: p = {primeOne}; q = {primeTwo}\n");
             n = primeOne * primeTwo;
             var phi = (primeOne - 1) * (primeTwo - 1);
             var end = primes.Count - 1;
