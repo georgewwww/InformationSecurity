@@ -33,7 +33,7 @@ namespace KeysVault
         }
         private static void ShowErrorMessage(string Message)
         {
-            MessageBox.Show("An error ocured during the process. Please report to Developer at sajjadarifgul@gmail.com with this screenshot.\n\nError Message: " + Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Error Message: " + Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private static void ShowWarningMessage(string Message)
         {
